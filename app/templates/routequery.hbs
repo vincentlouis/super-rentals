@@ -1,0 +1,28 @@
+<form {{action "addQuery" on="submit"}}>
+  Enter {{input value=queryParam}}
+  <input type="submit" value="Send"/>
+
+  <h1>{{queryParam}}</h1>
+</form>
+<br>
+<h2>All Players</h2>
+<ul>
+  {{#each model as |sports|}}
+    <li>{{sports}}</li>
+  {{/each}}
+</ul>
+{{myhelper 'Vincent Louis'}}
+
+{{ui-slider
+  ticks='0,200,400'
+  ticksLabels='Terrible,Neutral,Great'
+  ticksSnapBounds=15
+  mood='rag'
+  sections=3
+  tooltip='hide'
+  handle='rect'
+  focus=true
+  min=0
+  max=400
+  immediateResponse=false }}
+
